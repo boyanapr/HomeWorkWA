@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="bg-BG">
+	<head>
+		<meta charset="UTF-8" />
+		<title>"Мултимедия"</title>
+		<style>
+		header
+		    {
+			  border:3px solid lightblue; 
+			}
+		nav li
+			{
+				display: inline;
+				padding: 10px;
+			}
+	    main
+		    {
+			 border: 1px solid red;
+			 width: 950px;
+			 float: left;
+			}
+		
+		aside
+			{
+				float: right;			
+			}
+		footer
+			{
+				border:3px solid lightgreen;		
+				clear: both;
+			}
+		</style>
+	</head>
+	<body>
+	    <header style="text-align: center;">
+		    <div style="
+				width:50%;
+				display: inline-block;		
+				border:2px solid black;
+				margin-left: auto;
+				margin-right: auto;
+			">
+		        <nav>
+				    <ul>
+				        <li>
+						    <img src="img/wa_logo.png" alt="WebAcademy" width="200px" height="40px" /> 
+					    </li>
+						<li>
+					        <img src="img/Vbox7fff.png" alt="Vbox" width="50px" height="40px" />
+				        </li>
+                        <li>						
+							<img src="img/google-hummingbird.jpg" alt="Google" width="180px" height="40px" />		
+                        </li>
+					</ul>					
+			    </nav>
+			</div>
+		</header>
+		<main>
+		    <section>
+			    <article>
+				    <h1>Какво имаме да правим днес</h1>
+					<details>
+					    <summary>Семантичен уеб и мултимедия</summary>
+					        <ul>
+						        <li>Използвайте HTML5 елементи за да създадете документ с такава структура</li>
+							    <li><b>Спазвайте правилата за писане на качествен и <u>подреден</u> код!</b></li>
+							    <li>Единичните тагове също се затварят.&lt;img src="" alt="" /&gt;</li>
+							    <li>Таговете и техните елементи се изписват в долен регистър (т.е. с малки букви)</li>
+							    <li>Между отделните атрибути има 1 интервал разстояние, но между даден атрибут и неговата стойност и знака равно ("=") НЯМА разстояние</li>
+							    <li>Между аритметичните оператори в Java Script трябва да имате разстояние.</li>
+						    </ul>
+					</details>
+					<details>
+					    <summary>Вмъкнете видео</summary>
+						<p>
+						    Вие избирате видеото, което да вмъкнете. Ако не намирате лесно, използвайте видеото от упражненията.
+							<video controls>
+							    <source src="video/movie.mp4" type="video/mp4">
+							</video>
+						</p>
+					</details>
+					<details>
+					    <summary>Вмъкнете аудио</summary>
+						<p>
+						    Вие избирате аудиото, което да вмъкнете. Ако не намирате лесно, използвайте видеото от упражненията.
+							<audio controls>
+							    <source src="audio/horse.ogg" type="audio/ogg">
+							</audio>
+						</p>
+					</details>
+					<details>
+					    <summary>Вмъкване от <mark style="background-color:yellow;">You Tube</mark></summary>
+						<p>
+							<iframe width="640" height="360" src="https://www.youtube.com/embed/hBY3t1FheoE" frameborder="0" allowfullscreen></iframe>
+						</p>
+					</details>
+					<p>
+					    Прогрес бар
+						<input type="button" value="-" onclick="delProgress();">	
+					 
+					 	<progress id="progressBar" max="100" value="10"></progress> 
+					
+						<input type="button" value="+" onclick="addProgress();">
+					</p>
+		        </article>
+		    </section>
+		    
+		</main>
+		<aside>
+		    <img src="http://lorempixel.com/400/580" alt="image" height="250px" />
+		</aside>
+	    <footer>
+		  &copy; Web Academy
+		  <span style="float:right;">2016</span>
+	    </footer>
+		<script>
+			
+			function addProgress() {
+				var currentValue;
+				var element = document.getElementById('progressBar');
+				
+				currentValue = element.getAttribute('value');
+				currentValue = parseInt(currentValue) + 10;
+				
+				element.setAttribute('value',currentValue); 				
+ 				
+ 				//alert(currentValue);
+ 				
+ 				console.log(typeof currentValue);
+				
+				
+			}		
+			function delProgress() {
+				var currentValue;
+				var element = document.getElementById('progressBar');
+				
+				currentValue = element.getAttribute('value');
+				currentValue = parseInt(currentValue) - 10;
+				
+				element.setAttribute('value',currentValue); 				
+ 				
+ 				//alert(currentValue);
+ 				
+ 				console.log(typeof currentValue);
+				
+				
+			}		
+		</script>
+	</body>
+</html>

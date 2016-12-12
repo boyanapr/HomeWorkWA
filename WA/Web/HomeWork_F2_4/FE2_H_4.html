@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+	<title>Homework FE2_4</title>
+	<link rel="stylesheet" type="text/css" href="style/style.css" />
+
+  </head>
+  <script>
+    var is_expanded = true;
+			function switchNav()
+			{
+				var navLinks = document.getElementById('navLinks');
+				var topNavigation = document.getElementById('topPageNav');
+				var switchNavButton = document.getElementById('switchNav');
+				//alert(switchNavButton.value);
+
+				if(is_expanded == true)
+				{
+					navLinks.style.display = 'none';
+					topNavigation.style.width = '50px' ;
+					topNavigation.style.borderRadius = '0px 15px 15px 0px';
+					/*switchNavButton.setAttribute('value','');*/
+				}
+				else
+				{
+					topNavigation.style.borderRadius = '0px 0px 15px 0px';
+					navLinks.style.display = 'inline';
+					topNavigation.style.width = '100%';
+					/*switchNavButton.setAttribute('value','');	*/
+				}
+				is_expanded = !is_expanded;
+			}
+  </script>
+<body>
+  <div id="all">
+    <nav id="topPageNav">
+      <div id="navLinks">
+        <a class="button">Начало</a>
+        <a class="button">Galeria</a>
+        <a class="button">Награди</a>
+        <a class="button">Участници</a>
+        <a class="button">За контакти</a>
+      </div>
+      <button type="button" name="switchNav" id="switchNav" onclick="switchNav();">-</button>
+     </nav>
+    <section>
+	  <div id="img-shadow">
+        <h1><b>Galeria</b></h1>
+	    <a class="shadow"><img src="img1.png" alt="galeria" height="280" width="600" /></a>
+	    <a class="shadow"><img src="img2.jpg" alt="galeria" height="280" width="450" /></a>
+      </div>
+	    <div class="center">
+		  <ul class="pagination">
+		    <li><a href="#">«</a></li>
+		    <li><a class="active" href="#">1</a></li>
+		    <li><a href="#">2</a></li>
+		    <li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+		    <li><a href="#">5</a></li>
+			<li><a href="#">6</a></li>
+		    <li><a href="#">»</a></li>
+		  </ul>
+		</div>
+
+    </section>
+    <aside>
+      <form>
+        <fieldset>
+        <legend>Форма за участие в конкурса:</legend>
+	      <table>
+		  <tr>
+            <td>Първо име:</td><td><input type="text" value="Въведи името си"></td>
+		  </tr>
+		  <tr>
+            <td>Фамилия:</td><td><input type="text" value="Въведи фамилията си"></td>
+		  </tr>
+		  <tr>
+            <td>Заглавие:</td><td><input type="text" value="Заглавие на снимката"></td>
+		  </tr>
+		  <tr>
+		    <td>Конкурс:</td><td><select><option value="Първа пролет" disabled>Първа пролет</option></select></td>
+		  </tr>
+		  <tr>
+		    <td><input type="file" name="upload_file" id="u_file" />
+			    <label for="u_file"> 
+					<img width="50" src="512px-Icon_-_upload_photo.bmp" alt="upload">				
+				</label>
+			</td>
+		    <td>Кликнете на картинката в ляво, за да прикачите файл</td>
+          </tr>
+		  <tr>
+		    <td></td>
+		    <td><input type="submit" value="Send"></td>
+		  </tr>
+		  </table>
+        </fieldset>
+      </form>
+    </aside>
+    
+	<div id="readmore">
+      <a class="button-blue"><span>Read More</span></a>
+	</div>
+    
+  </div>
+</body>
+</html>

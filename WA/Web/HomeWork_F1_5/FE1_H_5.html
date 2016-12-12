@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>„Are you ready? Final Exam!“</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script>
+
+      function myFunction() {
+        document.getElementById("myBtn").value = "Expand";
+
+       }
+
+	function addNewItem() {
+    var table = document.getElementById("dataTable");
+    var row = table.insertRow(0);
+    var cell1 = row.insertCell(0);
+
+    cell1.innerHTML = "addNewItem...";
+
+</script>
+  </head>
+  <body>
+
+    <div id="navlink">
+	  <a href="#" class="">Link</a>
+      <a href="#" class="">Link</a>
+      <a href="#" class="">Link</a>
+      <a href="#" class="">Link</a>
+	</div>
+    <div id="main">
+	  <div id="nested">
+	    <table width="90%" align="center" cellspacing="15px" cellpadding="" empty-cells="show">
+		  <caption>Table: Control menu</caption>
+		  <tr>
+		    <td align="center" bgcolor="lightblue"><img src="http://www.tattoogen.com/tattoo/Shit%20Happens%20trial__/95.75/000000/Believe%20In%20Myself.jpg " alt="Myself"</td>
+		  </tr>
+		  <tr>
+		    <td><input type="button" id="myBtn" value="Collapse" onclick="myFunction()"></td>
+		  </tr>
+		  <tr>
+		    <td>
+			  
+			    <input type="button" value="Add List Item" onclick="addNewItem('dataTable');" />
+
+			  
+			</td>
+		  </tr>
+
+		  <tr>
+		    <td><button type="button">Check Form</button></td>
+		  </tr>
+
+		</table>
+		<form>
+          <fieldset>
+          <legend>My Account:</legend>
+            My Name is: <input type="text"><br>
+            My Year: <input type="nomber">
+			My sex:<input type="radio">Male<input type="radio">Female
+			I speak:<input type="checkbox">Bulgarian<input type="checkbox">English
+			I use<select><option>Right hand</option></select>
+          </fieldset>
+        </form>
+	  </div>
+	</div>
+	<div id="footer">
+	  <a href="http://enevsoft.net/" target="_blank">Yordan Enev</a>
+	  <a href="http:/webacademy.bg/" style="float:right;">Webacademy</a>
+	</div>
+
+  </body>
+</html>

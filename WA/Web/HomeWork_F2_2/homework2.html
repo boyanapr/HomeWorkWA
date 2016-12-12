@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="bg-BG">
+	<head>
+		<meta charset="UTF-8" />
+   	<title></title>
+ 	</head>
+ 	<body>
+	
+	<script>
+ 		   var canvas = document.getElementById('myCanvas');
+			function showLine() {
+			 	var Ax,Ay,Bx,By;
+			 	
+				Ax = prompt('Enter X:','10');
+				Ay = prompt('Enter Y:','10');
+				Bx = prompt('Enter X:','100');
+				By = prompt('Enter Y:','100');
+								 	
+			   var ctx = canvas.getContext('2d');
+			   ctx.beginPath();
+				ctx.moveTo(Ax,Ay);
+				ctx.lineTo(Bx,By);
+				ctx.stroke();
+			}
+			
+			function clearAll() {
+			 	var Ax,Ay,Wh,Ht;
+			 	
+				Ax = prompt('Enter X:','0');
+				Ay = prompt('Enter Y:','0');
+				Wh = prompt('Enter Width:','320');
+				Ht = prompt('Enter Height:','240');
+								 	
+			   var ctx = canvas.getContext('2d');
+				ctx.clearRect(Ax,Ay,Wh,Ht);
+			}
+ 		</script>		
+ 	</body>
+</html>
